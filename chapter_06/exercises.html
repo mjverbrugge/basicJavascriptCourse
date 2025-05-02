@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lesson 6 Exercises</title>
+    </head>
+    <body>
+        <script>
+            // Ex 6a - 6c
+            const hour = 13;
+            const name = 'Marnix';
+            if (hour > 6 && hour <=12){
+                console.log(`Good morning ${name}!`);
+            } else if (hour > 12 && hour <= 17){
+                console.log(`Good afternoon ${name}!`);
+            } else {
+                console.log(`Good night ${name}!`);
+            }
+
+            // Ex 6d
+            const age = 9;
+            const discount = (age<6 || age>65) ? 'Discount' : 'No discount';
+            console.log(discount);
+
+            // Ex 6e
+            const age6e = 99;
+            const isHoliday = false;
+
+            if (!isHoliday && (age6e<6 || age6e>65)){
+                console.log('Discount');
+            } else{
+                console.log('No discount');
+            }
+
+
+        </script>
+    </body>
+</html>
