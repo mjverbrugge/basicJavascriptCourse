@@ -5,7 +5,52 @@
     </head>
     <body>
         <script>
+            // 8a-c
+            const basketball = {
+                name: 'basketball',
+                price: 2095
+            }
+            console.log(basketball);
+            basketball.price += 500;
+            console.log(basketball);
             
+            basketball['delivery-time'] = '3 days';
+            console.log(basketball);
+
+            const socks = {
+                name: 'socks',
+                price: 1000
+            }
+
+            //  8d
+            function comparePrice(product1, product2){
+                if (product1.price > product2.price){
+                    return product2.name
+                } else if (product1.price < product2.price){
+                    return product1.name
+                } else if (product1.price === product2.price){
+                    return 'products have the same price'
+                }
+            }
+
+            console.log(comparePrice(basketball, socks));
+
+            // 8e
+            function isSameProduct(p1, p2){
+                if (p1.name != p2.name){
+                    return false
+                }
+                const same = (p1.price === p2.price) ? true : false;
+                return same
+            }
+
+            console.log(isSameProduct(basketball, socks));
+
+            // 8f
+            console.log('Good Morning'.toLocaleLowerCase())
+            // 8g
+            console.log('test'.repeat(2))
+
         </script>
     </body>
 </html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <body>
+        <p>Calculator</p>
+        <!-- FIRST LINE -->
+        <p>
+            <button onclick="
+            updateCalculation('1');
+            ">1</button>
+            
+            <button onclick="
+            updateCalculation('2');
+            ">2</button>
+            
+            <button onclick="
+            updateCalculation('3');
+            ">3</button>
+            
+            <button onclick="
+            updateCalculation(' + ');
+            ">+</button>
+        </p>
+        
+        <!-- SECOND LINE -->
+        <p>
+            <button onclick="
+            updateCalculation('4');
+            ">4</button>
+            
+            <button onclick="
+            updateCalculation('5');
+            ">5</button>
+            
+            <button onclick="
+            updateCalculation('6');
+            ">6</button>
+            
+            <button onclick="
+            updateCalculation(' - ');
+            ">-</button>
+        </p>
+
+        <!-- THIRD LINE -->
+        <p>
+            <button onclick="
+            updateCalculation('7');
+            ">7</button>
+            
+            <button onclick="
+            updateCalculation('8');
+            ">8</button>
+            
+            <button onclick="
+            updateCalculation('9');
+            ">9</button>
+            
+            <button onclick="
+            updateCalculation(' * ');
+            ">*</button>
+        </p>
+
+        <!-- FOURTH LINE -->
+        <p>
+            <button onclick="
+            updateCalculation('0');
+            ">0</button>
+            
+            <button onclick="
+            updateCalculation('.');
+            ">.</button>
+            
+            <button onclick="
+            console.log(eval(calculation));
+            calculation = '';
+            localStorage.setItem('calculation',calculation);
+            ">=</button>
+            
+            <button onclick="
+            updateCalculation(' / ')
+            ">/</button>
+        </p>
+
+        <!-- END LINE -->
+        <p>
+            <button onclick="
+            calculation = '';
+            localStorage.setItem('calculation',calculation);
+            console.log('Cleared.');
+            ">Clear</button>
+        </p>
+
+        <script>
+            let calculation = localStorage.getItem('calculation') || '';
+
+            function updateCalculation(input){
+                calculation += input;
+                console.log(calculation);
+                localStorage.setItem('calculation',calculation);
+            }
+        </script>
+    </body>
+</html>
